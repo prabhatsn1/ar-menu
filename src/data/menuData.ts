@@ -2,12 +2,26 @@ import { MenuItem, MenuCategory, Restaurant } from "@/types";
 
 // Restaurant information
 export const restaurantInfo: Restaurant = {
+  id: "restaurant-1",
   name: "Delicious AR Bistro",
   description: "Experience fine dining in augmented reality",
   logo: "/images/logo.png",
   address: "123 Food Street, Gourmet City",
   phone: "+1 (555) 123-4567",
   website: "https://arbistro.com",
+  ownerId: "owner-1",
+  isActive: true,
+  subscriptionPlan: "premium",
+  qrCodeSecret: "bistro-secret-123",
+  customDomain: "bistro",
+  theme: {
+    primaryColor: "#667eea",
+    secondaryColor: "#764ba2",
+    backgroundColor: "#f8f9fa",
+    fontFamily: "Roboto",
+    logo: "/images/logo.png",
+  },
+  createdAt: new Date(),
 };
 
 // Menu categories
@@ -17,24 +31,32 @@ export const menuCategories: MenuCategory[] = [
     name: "Starters",
     description: "Light bites to begin your journey",
     icon: "🥗",
+    restaurantId: "restaurant-1",
+    sortOrder: 1,
   },
   {
     id: "mains",
     name: "Main Course",
     description: "Hearty and satisfying dishes",
     icon: "🍖",
+    restaurantId: "restaurant-1",
+    sortOrder: 2,
   },
   {
     id: "desserts",
     name: "Desserts",
     description: "Sweet endings to your meal",
     icon: "🍰",
+    restaurantId: "restaurant-1",
+    sortOrder: 3,
   },
   {
     id: "drinks",
     name: "Beverages",
     description: "Refreshing drinks and cocktails",
     icon: "🍷",
+    restaurantId: "restaurant-1",
+    sortOrder: 4,
   },
 ];
 
@@ -48,10 +70,13 @@ export const menuItems: MenuItem[] = [
     price: 18.99,
     image: "/images/Burger.jpg",
     category: "mains",
+    restaurantId: "restaurant-1",
     model3D: "/models/burger.glb",
     allergens: ["gluten", "dairy"],
     spicyLevel: 1,
     isVegetarian: false,
+    isActive: true,
+    createdAt: new Date(),
   },
   {
     id: "caesar-salad",
@@ -61,9 +86,12 @@ export const menuItems: MenuItem[] = [
     price: 12.99,
     image: "/images/Salad.jpg",
     category: "starters",
+    restaurantId: "restaurant-1",
     model3D: "/models/salad.glb",
     allergens: ["dairy", "gluten"],
     isVegetarian: true,
+    isActive: true,
+    createdAt: new Date(),
   },
   {
     id: "chocolate-cake",
@@ -73,9 +101,12 @@ export const menuItems: MenuItem[] = [
     price: 9.99,
     image: "/images/Cake.jpg",
     category: "desserts",
+    restaurantId: "restaurant-1",
     model3D: "/models/cake.glb",
     allergens: ["gluten", "dairy", "eggs"],
     isVegetarian: true,
+    isActive: true,
+    createdAt: new Date(),
   },
   {
     id: "signature-cocktail",
@@ -85,7 +116,10 @@ export const menuItems: MenuItem[] = [
     price: 14.99,
     image: "/images/Cocktail.jpg",
     category: "drinks",
+    restaurantId: "restaurant-1",
     model3D: "/models/cocktail.glb",
+    isActive: true,
+    createdAt: new Date(),
   },
   {
     id: "tiramisu",
@@ -95,9 +129,12 @@ export const menuItems: MenuItem[] = [
     price: 8.99,
     image: "/images/tiramisu.jpg",
     category: "desserts",
+    restaurantId: "restaurant-1",
     model3D: "/models/tiramisu.glb",
     allergens: ["gluten", "dairy", "eggs"],
     isVegetarian: true,
+    isActive: true,
+    createdAt: new Date(),
   },
 ];
 
