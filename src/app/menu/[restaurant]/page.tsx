@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { useParams, useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import {
   Box,
   Container,
@@ -43,7 +43,6 @@ import { RestaurantInfoDialog } from "@/components/RestaurantInfoDialog";
  * URL pattern: /menu/[restaurant]?r=secret or /menu/[restaurant]?restaurantId=id
  */
 export default function RestaurantMenuPage() {
-  const params = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
   const theme = useTheme();
