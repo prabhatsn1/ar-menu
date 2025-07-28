@@ -1,0 +1,145 @@
+{
+  "header": {
+    "title": "Restaurant Owner Login",
+    "subtitle": "Access your restaurant dashboard and manage your AR menu",
+    "logo": {
+      "icon": "restaurant",
+      "text": "AR Menu Platform"
+    }
+  },
+  "loginForm": {
+    "title": "Sign In to Your Account",
+    "subtitle": "Enter your credentials to access the dashboard",
+    "fields": [
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "owner@restaurant.com",
+        "required": true,
+        "autoComplete": "email",
+        "icon": "email"
+      },
+      {
+        "name": "password",
+        "label": "Password",
+        "type": "password",
+        "placeholder": "••••••••",
+        "required": true,
+        "autoComplete": "current-password",
+        "icon": "lock"
+      }
+    ],
+    "options": {
+      "rememberMe": {
+        "label": "Remember me",
+        "enabled": true
+      },
+      "forgotPassword": {
+        "text": "Forgot your password?",
+        "link": "/auth/forgot-password"
+      }
+    },
+    "submitButton": {
+      "text": "Sign In",
+      "loadingText": "Signing in..."
+    }
+  },
+  "demoAccounts": {
+    "title": "Demo Accounts",
+    "subtitle": "Try the platform with these sample restaurant accounts",
+    "accounts": [
+      {
+        "name": "The Gourmet Bistro",
+        "email": "demo@bistro.com",
+        "password": "demo123",
+        "description": "Upscale French cuisine with AR wine pairings",
+        "features": ["Premium Plan", "AR Models", "Multi-language"]
+      },
+      {
+        "name": "Sunset Café",
+        "email": "demo@cafe.com",
+        "password": "demo123",
+        "description": "Cozy café with breakfast and brunch specialties",
+        "features": ["Basic Plan", "QR Codes", "Mobile Optimized"]
+      },
+      {
+        "name": "Spice Garden",
+        "email": "demo@spicegarden.com",
+        "password": "demo123",
+        "description": "Authentic Indian restaurant with spice level indicators",
+        "features": ["Standard Plan", "Dietary Filters", "AR Models"]
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Our Platform?",
+    "list": [
+      {
+        "icon": "ar",
+        "title": "AR Food Preview",
+        "description": "Let customers see dishes in 3D before ordering"
+      },
+      {
+        "icon": "qr",
+        "title": "QR Code Menus",
+        "description": "Contactless menu access with instant updates"
+      },
+      {
+        "icon": "analytics",
+        "title": "Analytics Dashboard",
+        "description": "Track popular items and customer preferences"
+      },
+      {
+        "icon": "mobile",
+        "title": "Mobile Optimized",
+        "description": "Perfect experience on all devices and browsers"
+      }
+    ]
+  },
+  "signup": {
+    "text": "Don't have an account?",
+    "linkText": "Sign up for free",
+    "link": "/auth/signup"
+  },
+  "footer": {
+    "links": [
+      {
+        "text": "Back to Home",
+        "route": "/",
+        "icon": "home"
+      },
+      {
+        "text": "Privacy Policy",
+        "route": "/privacy",
+        "icon": "security"
+      },
+      {
+        "text": "Terms of Service",
+        "route": "/terms",
+        "icon": "description"
+      },
+      {
+        "text": "Support",
+        "route": "/support",
+        "icon": "help"
+      }
+    ]
+  },
+  "validation": {
+    "email": {
+      "required": "Email is required",
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "required": "Password is required",
+      "minLength": "Password must be at least 8 characters"
+    }
+  },
+  "messages": {
+    "success": "Login successful! Redirecting to dashboard...",
+    "error": "Invalid credentials. Please try again.",
+    "networkError": "Network error. Please check your connection.",
+    "sessionExpired": "Your session has expired. Please login again."
+  }
+}

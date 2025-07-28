@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "title": "AR Restaurant Menus",
+    "subtitle": "Experience dining in augmented reality. Scan QR codes to view restaurant menus with interactive 3D food models and immersive AR previews.",
+    "qrAccess": {
+      "title": "Access Restaurant Menu",
+      "placeholder": "Enter QR code or restaurant name",
+      "buttonText": "Access Menu",
+      "helpText": "Try: \"bistro-secret-123\" or \"cafe-secret-456\""
+    }
+  },
+  "appBar": {
+    "title": "AR Menu Platform",
+    "buttons": [
+      {
+        "label": "Restaurant Login",
+        "icon": "login",
+        "route": "/auth/login"
+      },
+      {
+        "label": "Dashboard",
+        "icon": "dashboard",
+        "route": "/dashboard"
+      }
+    ]
+  },
+  "featuredSection": {
+    "title": "Featured Restaurants",
+    "subtitle": "Discover restaurants offering immersive AR dining experiences"
+  },
+  "platformFeatures": {
+    "title": "Platform Features",
+    "subtitle": "Everything you need for a modern dining experience",
+    "features": [
+      {
+        "icon": "qr",
+        "title": "QR Code Access",
+        "description": "Scan QR codes at restaurant tables for instant menu access. Each restaurant has unique, secure access codes.",
+        "color": "primary"
+      },
+      {
+        "icon": "ar",
+        "title": "AR Food Preview",
+        "description": "View 3D models of dishes in augmented reality before ordering. See realistic food presentations on your table.",
+        "color": "success"
+      },
+      {
+        "icon": "restaurant",
+        "title": "Multi-Restaurant Support",
+        "description": "Platform supports multiple restaurants with isolated menus. Owners can manage their own content independently.",
+        "color": "warning"
+      }
+    ]
+  },
+  "deviceCompatibility": {
+    "title": "Device Compatibility",
+    "subtitle": "Works on all modern devices with camera support",
+    "devices": [
+      {
+        "icon": "smartphone",
+        "label": "Mobile Phones",
+        "supported": true
+      },
+      {
+        "icon": "computer",
+        "label": "Tablets & Laptops",
+        "supported": true
+      },
+      {
+        "icon": "web",
+        "label": "Web Browsers",
+        "supported": true
+      }
+    ]
+  },
+  "floatingAction": {
+    "text": "?",
+    "tooltip": "View Guide",
+    "route": "/guide"
+  },
+  "notifications": [
+    {
+      "type": "info",
+      "message": "New AR features available! Experience 360° food previews.",
+      "dismissible": true
+    },
+    {
+      "type": "success",
+      "message": "Platform now supports 50+ restaurants worldwide!",
+      "dismissible": true
+    }
+  ]
+}

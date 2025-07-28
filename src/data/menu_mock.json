@@ -1,0 +1,212 @@
+{
+  "header": {
+    "restaurantInfo": {
+      "nameDisplay": "dynamic",
+      "logoIcon": "restaurant",
+      "subtitle": "Explore our menu in AR"
+    },
+    "navigation": {
+      "backButton": {
+        "text": "Back",
+        "icon": "arrow_back"
+      },
+      "actionButtons": [
+        {
+          "icon": "qr_code",
+          "tooltip": "Generate QR Code",
+          "action": "generateQR"
+        },
+        {
+          "icon": "language",
+          "tooltip": "Change Language",
+          "action": "openLanguageDialog"
+        },
+        {
+          "icon": "info",
+          "tooltip": "Restaurant Info",
+          "action": "openRestaurantInfo"
+        },
+        {
+          "icon": "help",
+          "tooltip": "User Guide",
+          "route": "/guide"
+        }
+      ]
+    }
+  },
+  "searchAndFilter": {
+    "searchPlaceholder": "Search menu items...",
+    "searchIcon": "search",
+    "filterButton": {
+      "text": "All Items",
+      "icon": "filter_list"
+    },
+    "categoryFilters": {
+      "all": {
+        "label": "All Items",
+        "icon": "restaurant"
+      }
+    }
+  },
+  "menuDisplay": {
+    "loadingMessage": "Loading delicious menu items...",
+    "emptyState": {
+      "title": "No items found",
+      "subtitle": "Try adjusting your search or filter criteria",
+      "icon": "search_off"
+    },
+    "noSearchResults": {
+      "title": "No search results",
+      "subtitle": "Try different keywords or browse all items",
+      "buttonText": "Clear Search"
+    }
+  },
+  "menuCard": {
+    "badges": {
+      "vegetarian": {
+        "label": "🌱 Vegetarian",
+        "color": "success"
+      },
+      "vegan": {
+        "label": "🥗 Vegan",
+        "color": "success"
+      },
+      "spicy": {
+        "label": "🌶️ Spicy",
+        "color": "warning"
+      },
+      "arAvailable": {
+        "label": "AR Available",
+        "color": "info"
+      }
+    },
+    "actions": [
+      {
+        "type": "ar",
+        "text": "View in AR",
+        "icon": "view_in_ar",
+        "gradient": true,
+        "condition": "hasModel3D"
+      },
+      {
+        "type": "qr",
+        "icon": "qr_code",
+        "tooltip": "Generate QR Code",
+        "iconButton": true
+      },
+      {
+        "type": "details",
+        "text": "View Details",
+        "icon": "info",
+        "variant": "outlined"
+      }
+    ],
+    "spicyLevels": {
+      "0": "",
+      "1": "🌶️",
+      "2": "🌶️🌶️",
+      "3": "🌶️🌶️🌶️"
+    }
+  },
+  "dialogs": {
+    "qrCode": {
+      "title": "QR Code for Menu",
+      "subtitle": "Share this QR code to give others access to the menu",
+      "downloadButton": "Download QR Code",
+      "shareButton": "Share QR Code",
+      "closeButton": "Close"
+    },
+    "language": {
+      "title": "Select Language",
+      "subtitle": "Choose your preferred language for the menu",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "flag": "🇺🇸"
+        },
+        {
+          "code": "es",
+          "name": "Español",
+          "flag": "🇪🇸"
+        },
+        {
+          "code": "fr",
+          "name": "Français",
+          "flag": "🇫🇷"
+        },
+        {
+          "code": "de",
+          "name": "Deutsch",
+          "flag": "🇩🇪"
+        },
+        {
+          "code": "it",
+          "name": "Italiano",
+          "flag": "🇮🇹"
+        }
+      ]
+    },
+    "restaurantInfo": {
+      "title": "Restaurant Information",
+      "sections": [
+        {
+          "title": "Contact Information",
+          "icon": "contact_phone",
+          "fields": ["phone", "email", "website"]
+        },
+        {
+          "title": "Location",
+          "icon": "location_on",
+          "fields": ["address", "city", "hours"]
+        },
+        {
+          "title": "About",
+          "icon": "info",
+          "fields": ["description", "cuisine", "priceRange"]
+        }
+      ]
+    }
+  },
+  "floatingActions": [
+    {
+      "icon": "filter_list",
+      "tooltip": "Filter Menu",
+      "position": "bottom-left",
+      "action": "openFilters"
+    },
+    {
+      "icon": "help",
+      "tooltip": "Need Help?",
+      "position": "bottom-right",
+      "route": "/guide"
+    }
+  ],
+  "notifications": {
+    "arSupport": {
+      "type": "info",
+      "message": "💡 Tip: Look for the AR badge on menu items to view them in 3D!",
+      "dismissible": true,
+      "showOnce": true
+    },
+    "networkError": {
+      "type": "error",
+      "message": "Network error. Some features may not work properly.",
+      "dismissible": false
+    }
+  },
+  "accessibility": {
+    "ariaLabels": {
+      "menuCard": "Menu item card for {itemName}",
+      "arButton": "View {itemName} in augmented reality",
+      "qrButton": "Generate QR code for {itemName}",
+      "searchInput": "Search menu items",
+      "filterButton": "Filter menu by category"
+    },
+    "announcements": {
+      "searchResults": "{count} menu items found",
+      "filterApplied": "Filter applied: {category}",
+      "itemLoaded": "Menu items loaded successfully"
+    }
+  }
+}

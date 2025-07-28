@@ -1,0 +1,196 @@
+{
+  "appBar": {
+    "title": "Restaurant Dashboard",
+    "userMenu": {
+      "items": [
+        {
+          "label": "Profile Settings",
+          "icon": "person",
+          "route": "/profile"
+        },
+        {
+          "label": "Restaurant Settings",
+          "icon": "settings",
+          "route": "/settings"
+        },
+        {
+          "label": "Logout",
+          "icon": "logout",
+          "route": "/auth/login"
+        }
+      ]
+    }
+  },
+  "welcome": {
+    "title": "Welcome back! 👋",
+    "subtitle": "Manage your restaurant menu and track performance"
+  },
+  "quickStats": {
+    "title": "Dashboard Overview",
+    "stats": [
+      {
+        "label": "Total Menu Items",
+        "value": "menuItems.length",
+        "icon": "restaurant",
+        "color": "primary"
+      },
+      {
+        "label": "Categories",
+        "value": "categories.length",
+        "icon": "category",
+        "color": "secondary"
+      },
+      {
+        "label": "AR Models",
+        "value": "arModelsCount",
+        "icon": "ar",
+        "color": "success"
+      },
+      {
+        "label": "Active Items",
+        "value": "activeItemsCount",
+        "icon": "visibility",
+        "color": "info"
+      }
+    ]
+  },
+  "menuManagement": {
+    "title": "Menu Items",
+    "addButton": {
+      "text": "Add New Item",
+      "icon": "add"
+    },
+    "emptyState": {
+      "title": "No menu items yet",
+      "subtitle": "Start building your menu by adding your first item",
+      "buttonText": "Add First Item"
+    },
+    "itemActions": [
+      {
+        "label": "View",
+        "icon": "visibility",
+        "color": "primary"
+      },
+      {
+        "label": "Edit",
+        "icon": "edit",
+        "color": "primary"
+      },
+      {
+        "label": "Delete",
+        "icon": "delete",
+        "color": "error"
+      }
+    ]
+  },
+  "itemDialog": {
+    "addTitle": "Add New Menu Item",
+    "editTitle": "Edit Menu Item",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Item Name",
+        "type": "text",
+        "required": true,
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "price",
+        "label": "Price",
+        "type": "number",
+        "required": true,
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "grid": { "xs": 12 }
+      },
+      {
+        "name": "category",
+        "label": "Category",
+        "type": "select",
+        "required": true,
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "image",
+        "label": "Image URL",
+        "type": "text",
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "model3D",
+        "label": "3D Model URL (GLB)",
+        "type": "text",
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "allergens",
+        "label": "Allergens (comma separated)",
+        "type": "text",
+        "grid": { "xs": 12, "sm": 6 }
+      },
+      {
+        "name": "isVegetarian",
+        "label": "Vegetarian",
+        "type": "switch",
+        "grid": { "xs": 12, "sm": 4 }
+      },
+      {
+        "name": "isVegan",
+        "label": "Vegan",
+        "type": "switch",
+        "grid": { "xs": 12, "sm": 4 }
+      },
+      {
+        "name": "spicyLevel",
+        "label": "Spicy Level (0-3)",
+        "type": "number",
+        "min": 0,
+        "max": 3,
+        "grid": { "xs": 12, "sm": 4 }
+      }
+    ],
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update"
+    }
+  },
+  "analytics": {
+    "title": "Analytics & Insights",
+    "charts": [
+      {
+        "title": "Popular Items",
+        "type": "bar",
+        "data": "popularItemsData"
+      },
+      {
+        "title": "Category Performance",
+        "type": "pie",
+        "data": "categoryPerformanceData"
+      },
+      {
+        "title": "AR Usage",
+        "type": "line",
+        "data": "arUsageData"
+      }
+    ]
+  },
+  "notifications": [
+    {
+      "type": "info",
+      "message": "Your menu has been updated successfully!",
+      "timestamp": "2025-07-28T10:30:00Z"
+    },
+    {
+      "type": "warning",
+      "message": "Some 3D models are missing. Upload GLB files to enable AR.",
+      "timestamp": "2025-07-28T09:15:00Z"
+    }
+  ]
+}

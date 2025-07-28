@@ -1,0 +1,262 @@
+{
+  "header": {
+    "title": "Item Details",
+    "navigation": {
+      "backButton": {
+        "text": "Back to Menu",
+        "icon": "arrow_back"
+      },
+      "shareButton": {
+        "icon": "share",
+        "tooltip": "Share this item"
+      }
+    }
+  },
+  "itemDisplay": {
+    "imageSection": {
+      "altText": "{itemName} - delicious dish",
+      "fallbackImage": "/images/placeholder-dish.jpg",
+      "aspectRatio": "16:9"
+    },
+    "titleSection": {
+      "nameVariant": "h3",
+      "priceFormat": "currency",
+      "currency": "USD"
+    },
+    "badges": {
+      "vegetarian": {
+        "label": "🌱 Vegetarian",
+        "color": "success",
+        "variant": "filled"
+      },
+      "vegan": {
+        "label": "🥗 Vegan",
+        "color": "success",
+        "variant": "filled"
+      },
+      "glutenFree": {
+        "label": "🌾 Gluten Free",
+        "color": "info",
+        "variant": "filled"
+      },
+      "spicy": {
+        "label": "🌶️ Spicy",
+        "color": "warning",
+        "variant": "filled"
+      },
+      "arAvailable": {
+        "label": "AR Available",
+        "color": "primary",
+        "variant": "filled"
+      }
+    },
+    "spicyLevels": {
+      "0": "",
+      "1": "🌶️ Mild",
+      "2": "🌶️🌶️ Medium",
+      "3": "🌶️🌶️🌶️ Hot"
+    }
+  },
+  "actionButtons": {
+    "primary": {
+      "ar": {
+        "text": "View in AR",
+        "icon": "view_in_ar",
+        "fullWidth": true,
+        "size": "large",
+        "gradient": "linear-gradient(45deg, #667eea 30%, #764ba2 90%)",
+        "condition": "hasModel3D"
+      }
+    },
+    "secondary": [
+      {
+        "type": "qr",
+        "text": "Generate QR Code",
+        "icon": "qr_code",
+        "variant": "outlined",
+        "fullWidth": true
+      },
+      {
+        "type": "share",
+        "text": "Share Item",
+        "icon": "share",
+        "variant": "outlined",
+        "fullWidth": true
+      }
+    ]
+  },
+  "sections": {
+    "description": {
+      "title": "Description",
+      "icon": "description",
+      "collapsible": false
+    },
+    "ingredients": {
+      "title": "Ingredients",
+      "icon": "eco",
+      "collapsible": true,
+      "defaultExpanded": false,
+      "emptyMessage": "Ingredient information not available"
+    },
+    "allergens": {
+      "title": "Allergens & Dietary Information",
+      "icon": "warning",
+      "collapsible": true,
+      "defaultExpanded": true,
+      "emptyMessage": "No allergen information available",
+      "severityColors": {
+        "high": "error",
+        "medium": "warning",
+        "low": "info"
+      }
+    },
+    "nutrition": {
+      "title": "Nutritional Information",
+      "icon": "fitness_center",
+      "collapsible": true,
+      "defaultExpanded": false,
+      "fields": [
+        {
+          "label": "Calories",
+          "unit": "kcal",
+          "icon": "local_fire_department"
+        },
+        {
+          "label": "Protein",
+          "unit": "g",
+          "icon": "fitness_center"
+        },
+        {
+          "label": "Carbs",
+          "unit": "g",
+          "icon": "grain"
+        },
+        {
+          "label": "Fat",
+          "unit": "g",
+          "icon": "opacity"
+        }
+      ]
+    },
+    "customization": {
+      "title": "Customization Options",
+      "icon": "tune",
+      "collapsible": true,
+      "defaultExpanded": false,
+      "emptyMessage": "No customization options available"
+    }
+  },
+  "dialogs": {
+    "qrCode": {
+      "title": "QR Code for {itemName}",
+      "subtitle": "Share this QR code to let others view this specific item",
+      "actions": [
+        {
+          "text": "Download QR Code",
+          "icon": "download",
+          "variant": "contained"
+        },
+        {
+          "text": "Share QR Code",
+          "icon": "share",
+          "variant": "outlined"
+        }
+      ],
+      "closeButton": "Close"
+    },
+    "share": {
+      "title": "Share {itemName}",
+      "subtitle": "Share this delicious item with friends and family",
+      "options": [
+        {
+          "platform": "whatsapp",
+          "label": "WhatsApp",
+          "icon": "whatsapp",
+          "color": "#25D366"
+        },
+        {
+          "platform": "facebook",
+          "label": "Facebook",
+          "icon": "facebook",
+          "color": "#1877F2"
+        },
+        {
+          "platform": "twitter",
+          "label": "Twitter",
+          "icon": "twitter",
+          "color": "#1DA1F2"
+        },
+        {
+          "platform": "copy",
+          "label": "Copy Link",
+          "icon": "link",
+          "color": "primary"
+        }
+      ]
+    },
+    "arNotSupported": {
+      "title": "AR Not Supported",
+      "message": "Your device doesn't support AR features or camera access is not available.",
+      "suggestions": [
+        "Try using a different device",
+        "Enable camera permissions",
+        "Use a modern browser"
+      ],
+      "buttons": [
+        {
+          "text": "View Image Instead",
+          "variant": "contained"
+        },
+        {
+          "text": "Learn More",
+          "variant": "outlined",
+          "route": "/guide"
+        }
+      ]
+    }
+  },
+  "loadingStates": {
+    "item": "Loading item details...",
+    "ar": "Preparing AR experience...",
+    "qr": "Generating QR code..."
+  },
+  "errorStates": {
+    "itemNotFound": {
+      "title": "Item Not Found",
+      "message": "The requested menu item could not be found.",
+      "action": {
+        "text": "Back to Menu",
+        "route": "/menu"
+      }
+    },
+    "loadingError": {
+      "title": "Loading Error",
+      "message": "Failed to load item details. Please try again.",
+      "action": {
+        "text": "Retry",
+        "action": "reload"
+      }
+    }
+  },
+  "relatedItems": {
+    "title": "You Might Also Like",
+    "subtitle": "Similar items from our menu",
+    "maxItems": 4,
+    "emptyMessage": "No related items found"
+  },
+  "accessibility": {
+    "ariaLabels": {
+      "itemImage": "Image of {itemName}",
+      "arButton": "View {itemName} in augmented reality",
+      "shareButton": "Share {itemName}",
+      "qrButton": "Generate QR code for {itemName}",
+      "expandSection": "Expand {sectionName} section",
+      "collapseSection": "Collapse {sectionName} section"
+    },
+    "announcements": {
+      "itemLoaded": "Item details loaded for {itemName}",
+      "sectionExpanded": "{sectionName} section expanded",
+      "qrGenerated": "QR code generated successfully"
+    }
+  }
+}

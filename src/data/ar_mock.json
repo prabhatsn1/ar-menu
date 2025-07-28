@@ -1,0 +1,295 @@
+{
+  "header": {
+    "title": "AR Experience",
+    "navigation": {
+      "backButton": {
+        "text": "Back",
+        "icon": "arrow_back"
+      },
+      "helpButton": {
+        "icon": "help_outline",
+        "tooltip": "AR Help"
+      }
+    }
+  },
+  "arInterface": {
+    "loadingScreen": {
+      "title": "Preparing AR Experience",
+      "subtitle": "Setting up camera and 3D models...",
+      "steps": [
+        "Initializing camera access",
+        "Loading 3D model",
+        "Calibrating AR tracking",
+        "Ready to view!"
+      ],
+      "tips": [
+        "Ensure good lighting for best results",
+        "Point camera at a flat surface",
+        "Allow camera permissions when prompted"
+      ]
+    },
+    "controls": {
+      "placement": {
+        "instruction": "Tap on a flat surface to place the dish",
+        "icon": "touch_app"
+      },
+      "manipulation": [
+        {
+          "action": "Pinch to Scale",
+          "description": "Use two fingers to resize the model",
+          "icon": "zoom_in"
+        },
+        {
+          "action": "Drag to Rotate",
+          "description": "Touch and drag to rotate the dish",
+          "icon": "rotate_right"
+        },
+        {
+          "action": "Move Around",
+          "description": "Walk around to view from different angles",
+          "icon": "360"
+        }
+      ]
+    },
+    "toolbar": {
+      "position": "bottom",
+      "buttons": [
+        {
+          "type": "screenshot",
+          "icon": "camera_alt",
+          "tooltip": "Take Screenshot",
+          "action": "captureScreen"
+        },
+        {
+          "type": "reset",
+          "icon": "refresh",
+          "tooltip": "Reset Position",
+          "action": "resetModel"
+        },
+        {
+          "type": "info",
+          "icon": "info",
+          "tooltip": "Item Info",
+          "action": "showItemInfo"
+        },
+        {
+          "type": "share",
+          "icon": "share",
+          "tooltip": "Share AR Experience",
+          "action": "shareAR"
+        }
+      ]
+    }
+  },
+  "deviceSupport": {
+    "requirements": {
+      "camera": "Rear-facing camera required",
+      "browser": "WebAR compatible browser",
+      "lighting": "Good lighting conditions recommended",
+      "surface": "Flat surface for model placement"
+    },
+    "compatibility": {
+      "ios": {
+        "supported": true,
+        "minVersion": "iOS 12+",
+        "browsers": ["Safari", "Chrome"]
+      },
+      "android": {
+        "supported": true,
+        "minVersion": "Android 7+",
+        "browsers": ["Chrome", "Firefox"]
+      },
+      "desktop": {
+        "supported": false,
+        "message": "AR features are optimized for mobile devices"
+      }
+    }
+  },
+  "instructions": {
+    "onboarding": [
+      {
+        "step": 1,
+        "title": "Allow Camera Access",
+        "description": "Grant permission to use your camera for AR",
+        "icon": "camera_alt"
+      },
+      {
+        "step": 2,
+        "title": "Find a Flat Surface",
+        "description": "Point your camera at a table or flat surface",
+        "icon": "crop_free"
+      },
+      {
+        "step": 3,
+        "title": "Tap to Place",
+        "description": "Tap where you want to place the dish",
+        "icon": "touch_app"
+      },
+      {
+        "step": 4,
+        "title": "Interact & Explore",
+        "description": "Pinch, drag, and move around to explore",
+        "icon": "pan_tool"
+      }
+    ],
+    "troubleshooting": {
+      "cameraIssues": {
+        "title": "Camera Problems?",
+        "solutions": [
+          "Check camera permissions in browser settings",
+          "Ensure no other apps are using the camera",
+          "Try refreshing the page",
+          "Use a different browser"
+        ]
+      },
+      "trackingIssues": {
+        "title": "AR Not Working?",
+        "solutions": [
+          "Improve lighting conditions",
+          "Move to a different surface",
+          "Keep the camera steady",
+          "Ensure the surface has visible texture"
+        ]
+      },
+      "performanceIssues": {
+        "title": "Slow Performance?",
+        "solutions": [
+          "Close other browser tabs",
+          "Restart the app",
+          "Use a newer device",
+          "Check internet connection"
+        ]
+      }
+    }
+  },
+  "modelInfo": {
+    "displayPanel": {
+      "title": "{itemName}",
+      "fields": [
+        {
+          "label": "Price",
+          "key": "price",
+          "format": "currency"
+        },
+        {
+          "label": "Category",
+          "key": "category",
+          "format": "text"
+        },
+        {
+          "label": "Preparation Time",
+          "key": "prepTime",
+          "format": "duration"
+        }
+      ],
+      "actions": [
+        {
+          "type": "order",
+          "text": "Add to Order",
+          "icon": "shopping_cart",
+          "variant": "contained"
+        },
+        {
+          "type": "details",
+          "text": "View Details",
+          "icon": "info",
+          "variant": "outlined"
+        }
+      ]
+    }
+  },
+  "errorStates": {
+    "noARSupport": {
+      "title": "AR Not Supported",
+      "message": "Your device or browser doesn't support AR features.",
+      "suggestions": [
+        "Try using a mobile device",
+        "Update your browser",
+        "Use Chrome or Safari"
+      ],
+      "fallback": {
+        "text": "View Images Instead",
+        "action": "viewImages"
+      }
+    },
+    "cameraPermissionDenied": {
+      "title": "Camera Access Denied",
+      "message": "AR requires camera access to work properly.",
+      "instructions": [
+        "Click the camera icon in your browser's address bar",
+        "Select 'Allow' for camera access",
+        "Refresh the page and try again"
+      ]
+    },
+    "modelLoadFailed": {
+      "title": "Model Load Failed",
+      "message": "Failed to load the 3D model for this item.",
+      "actions": [
+        {
+          "text": "Retry",
+          "action": "retryLoad"
+        },
+        {
+          "text": "Back to Menu",
+          "action": "backToMenu"
+        }
+      ]
+    }
+  },
+  "performance": {
+    "optimization": {
+      "modelLOD": true,
+      "textureCompression": true,
+      "frustumCulling": true,
+      "maxPolygons": 10000
+    },
+    "quality": {
+      "high": {
+        "textureSize": 1024,
+        "shadows": true,
+        "reflections": true
+      },
+      "medium": {
+        "textureSize": 512,
+        "shadows": true,
+        "reflections": false
+      },
+      "low": {
+        "textureSize": 256,
+        "shadows": false,
+        "reflections": false
+      }
+    }
+  },
+  "analytics": {
+    "events": [
+      "ar_session_start",
+      "ar_model_placed",
+      "ar_interaction",
+      "ar_screenshot_taken",
+      "ar_session_end"
+    ],
+    "metrics": [
+      "session_duration",
+      "interaction_count",
+      "placement_attempts",
+      "screenshot_count"
+    ]
+  },
+  "accessibility": {
+    "ariaLabels": {
+      "arCanvas": "Augmented reality view of {itemName}",
+      "controlButton": "{action} button",
+      "instructionText": "AR instruction: {instruction}"
+    },
+    "announcements": {
+      "arStarted": "AR session started for {itemName}",
+      "modelPlaced": "3D model placed successfully",
+      "screenshotTaken": "Screenshot captured"
+    },
+    "alternatives": {
+      "screenReader": "AR experience not accessible via screen reader. View item details instead.",
+      "voiceControl": "Use voice commands: 'take screenshot', 'reset position', 'back to menu'"
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "header": {
+    "title": "AR Restaurant Menu - User Guide",
+    "subtitle": "Welcome to Our AR Menu Experience! 🍽️",
+    "description": "Discover how to navigate, explore, and experience our restaurant menu using cutting-edge augmented reality technology.",
+    "proTip": "💡 Pro Tip: For the best AR experience, ensure you have a stable internet connection and allow camera access when prompted."
+  },
+  "quickStartSteps": [
+    {
+      "label": "Browse the Menu",
+      "content": "Learn how to navigate and search through our delicious offerings",
+      "icon": "search"
+    },
+    {
+      "label": "Use AR Features",
+      "content": "Experience dishes in augmented reality before ordering",
+      "icon": "ar"
+    },
+    {
+      "label": "Generate QR Codes",
+      "content": "Share menu items and access them easily",
+      "icon": "qr"
+    },
+    {
+      "label": "Advanced Features",
+      "content": "Discover additional functionalities",
+      "icon": "settings"
+    }
+  ],
+  "completionMessage": {
+    "title": "🎉 Congratulations! You're ready to explore our AR menu!",
+    "buttonText": "Go to Menu"
+  },
+  "sections": {
+    "browsing": {
+      "title": "1. Browsing and Searching the Menu",
+      "icon": "search",
+      "searchFeatures": {
+        "title": "🔍 Search Functionality",
+        "features": [
+          {
+            "title": "Smart Search",
+            "description": "Search by dish name, ingredients, or dietary preferences"
+          },
+          {
+            "title": "Fuzzy Matching",
+            "description": "Find items even with partial or approximate spelling"
+          },
+          {
+            "title": "Real-time Results",
+            "description": "See results update as you type"
+          }
+        ]
+      },
+      "categoryFiltering": {
+        "title": "🏷️ Category Filtering",
+        "categories": [
+          { "label": "🥗 Appetizers", "value": "appetizers" },
+          { "label": "🍝 Main Course", "value": "main" },
+          { "label": "🍰 Desserts", "value": "desserts" },
+          { "label": "🍹 Beverages", "value": "beverages" }
+        ],
+        "description": "Click on any category chip to filter items. Click \"All Items\" to reset filters."
+      },
+      "searchTips": {
+        "title": "💡 Search Tips:",
+        "tips": [
+          "Try searching for \"vegan\" or \"vegetarian\" to find dietary-specific options",
+          "Search \"spicy\" to find dishes with heat levels",
+          "Use ingredient names like \"chicken\", \"pasta\", or \"chocolate\""
+        ]
+      }
+    },
+    "arFeatures": {
+      "title": "2. Augmented Reality (AR) Experience",
+      "icon": "ar",
+      "deviceRequirement": "📱 Device Requirements: AR features work best on modern smartphones and tablets with camera access enabled.",
+      "howToUse": {
+        "title": "🎯 How to Use AR",
+        "steps": [
+          {
+            "number": "1️⃣",
+            "title": "Find AR-enabled dishes",
+            "description": "Look for the 'AR Available' badge on menu cards"
+          },
+          {
+            "number": "2️⃣",
+            "title": "Click 'View in AR'",
+            "description": "Tap the gradient AR button on any menu card"
+          },
+          {
+            "number": "3️⃣",
+            "title": "Allow camera access",
+            "description": "Grant permission when prompted by your browser"
+          },
+          {
+            "number": "4️⃣",
+            "title": "Point and explore",
+            "description": "Aim your camera at a flat surface to see the dish"
+          }
+        ]
+      },
+      "arControls": {
+        "title": "🛠️ AR Controls",
+        "controls": [
+          {
+            "action": "Tap to Place",
+            "description": "Tap on a detected surface to place the 3D model"
+          },
+          {
+            "action": "Pinch to Scale",
+            "description": "Use pinch gestures to resize the model"
+          },
+          {
+            "action": "Drag to Rotate",
+            "description": "Touch and drag to rotate the 3D model"
+          },
+          {
+            "action": "Move Around",
+            "description": "Walk around to view the dish from different angles"
+          }
+        ]
+      },
+      "systemRequirements": {
+        "title": "📋 System Requirements",
+        "requirements": [
+          {
+            "type": "Device",
+            "description": "Modern smartphone or tablet",
+            "icon": "phone"
+          },
+          {
+            "type": "Camera",
+            "description": "Rear-facing camera access",
+            "icon": "camera"
+          },
+          {
+            "type": "Connection",
+            "description": "Stable internet connection",
+            "icon": "wifi"
+          },
+          {
+            "type": "Browser",
+            "description": "WebAR compatible browser",
+            "icon": "security"
+          }
+        ]
+      }
+    },
+    "qrCodes": {
+      "title": "3. QR Code Generation and Sharing",
+      "icon": "qr",
+      "individualItems": {
+        "title": "📱 Individual Item QR Codes",
+        "features": [
+          {
+            "title": "Generate Item QR",
+            "description": "Click the QR icon on any menu card",
+            "icon": "qr"
+          },
+          {
+            "title": "Share Instantly",
+            "description": "Share the QR code via social media or messaging",
+            "icon": "share"
+          },
+          {
+            "title": "Direct AR Access",
+            "description": "QR codes link directly to AR view of the dish",
+            "icon": "ar"
+          }
+        ]
+      },
+      "completeMenu": {
+        "title": "📋 Complete Menu QR Code",
+        "features": [
+          {
+            "title": "Full Menu Access",
+            "description": "Generate QR for the entire menu experience",
+            "icon": "restaurant"
+          },
+          {
+            "title": "Table-side Ordering",
+            "description": "Perfect for contactless dining experiences",
+            "icon": "qr"
+          },
+          {
+            "title": "Quick Access",
+            "description": "Customers can scan and start browsing immediately",
+            "icon": "speed"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "🎯 Use Cases:",
+        "cases": [
+          "Share favorite dishes with friends before dining",
+          "Create contactless menu experiences for tables",
+          "Allow customers to preview dishes at home",
+          "Generate marketing materials for social media"
+        ]
+      }
+    },
+    "advancedFeatures": {
+      "title": "4. Advanced Features and Settings",
+      "icon": "info",
+      "languageSettings": {
+        "title": "🌍 Language Settings",
+        "features": [
+          {
+            "title": "Multi-language Support",
+            "description": "Access menu in different languages",
+            "icon": "language"
+          },
+          {
+            "title": "Automatic Translation",
+            "description": "Dish names and descriptions translated",
+            "icon": "check"
+          }
+        ]
+      },
+      "dietaryInfo": {
+        "title": "🍽️ Dietary Information",
+        "badges": [
+          { "label": "🌱 Vegan", "color": "success" },
+          { "label": "🥬 Vegetarian", "color": "info" },
+          { "label": "🌶️ Spicy", "color": "warning" }
+        ],
+        "description": "Clear dietary indicators help you make informed choices about allergens and dietary restrictions."
+      },
+      "troubleshooting": {
+        "title": "🔧 Troubleshooting Common Issues",
+        "arIssues": {
+          "title": "AR Not Working?",
+          "solutions": [
+            "Ensure camera permissions are enabled",
+            "Try refreshing the page",
+            "Check your internet connection",
+            "Use a well-lit environment"
+          ]
+        },
+        "qrIssues": {
+          "title": "QR Code Issues?",
+          "solutions": [
+            "Ensure you're connected to the internet",
+            "Try generating the QR code again",
+            "Check if your device supports QR scanning",
+            "Clear browser cache if needed"
+          ]
+        }
+      }
+    }
+  },
+  "callToAction": {
+    "title": "Ready to Explore? 🚀",
+    "description": "Now that you know how to use all our features, dive into our delicious menu and experience dining like never before!",
+    "buttonText": "Start Exploring Menu"
+  }
+}
