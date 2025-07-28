@@ -1,4 +1,4 @@
-import { MenuItem, MenuCategory, Restaurant, RestaurantTheme } from "@/types";
+import { MenuItem, MenuCategory, Restaurant } from "@/types";
 
 // Mock database for multi-tenant restaurant system
 // In production, replace with real database (MongoDB, PostgreSQL, etc.)

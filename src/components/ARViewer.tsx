@@ -89,30 +89,30 @@ export const ARViewer: React.FC<ARViewerProps> = ({
     arSceneRef.current.innerHTML = sceneHTML;
 
     // Add event listeners for model loading
-    const modelEntity = arSceneRef.current.querySelector('#model-entity');
+    const modelEntity = arSceneRef.current.querySelector("#model-entity");
     if (modelEntity) {
-      modelEntity.addEventListener('model-loaded', () => {
-        console.log('Model loaded successfully');
+      modelEntity.addEventListener("model-loaded", () => {
+        console.log("Model loaded successfully");
         setIsLoading(false);
       });
 
-      modelEntity.addEventListener('model-error', (error: any) => {
-        console.error('Error loading model:', error);
-        setError('Failed to load 3D model. Please try again.');
+      modelEntity.addEventListener("model-error", (error: Event) => {
+        console.error("Error loading model:", error);
+        setError("Failed to load 3D model. Please try again.");
         setIsLoading(false);
       });
     }
 
     // Add marker detection events
-    const marker = arSceneRef.current.querySelector('a-marker');
+    const marker = arSceneRef.current.querySelector("a-marker");
     if (marker) {
-      marker.addEventListener('markerFound', () => {
-        console.log('Marker detected');
+      marker.addEventListener("markerFound", () => {
+        console.log("Marker detected");
         setShowInstructions(false);
       });
 
-      marker.addEventListener('markerLost', () => {
-        console.log('Marker lost');
+      marker.addEventListener("markerLost", () => {
+        console.log("Marker lost");
       });
     }
   }, [modelPath]);

@@ -50,7 +50,6 @@ export default function RestaurantMenuPage() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   // Get restaurant identifier from URL params or query
-  const restaurantParam = params.restaurant as string;
   const restaurantSecret = searchParams.get("r");
   const restaurantId = searchParams.get("restaurantId");
 

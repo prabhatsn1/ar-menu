@@ -30,8 +30,8 @@ export default function ARPage() {
   const itemId = params.id as string;
 
   const [item, setItem] = useState<MenuItem | null>(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadItem = async () => {
@@ -67,6 +67,32 @@ export default function ARPage() {
     // Navigate to item details page instead of closing
     router.push(`/item/${itemId}`);
   };
+
+  if (loading) {
+    return (
+      <Box sx={{ minHeight: "100vh", backgroundColor: "#000" }}>
+        <AppBar position="sticky" sx={{ backgroundColor: "#000" }}>
+          <Toolbar>
+            <IconButton color="inherit" onClick={() => router.back()}>
+              <ArrowBackIcon />
+            </IconButton>
+            <Typography variant="h6" sx={{ flexGrow: 1, ml: 2 }}>
+              AR Experience
+            </Typography>
+            <IconButton color="inherit" onClick={() => router.push("/")}>
+              <HomeIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+
+        <Container maxWidth="md" sx={{ py: 4 }}>
+          <Typography variant="h6" color="textSecondary" align="center">
+            Loading AR experience...
+          </Typography>
+        </Container>
+      </Box>
+    );
+  }
 
   if (error || !item) {
     return (

@@ -29,9 +29,12 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/aframe": "^1.2.8",
+    "@types/animejs": "^3.1.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/stats.js": "^0.17.4",
+    "@types/webxr": "^0.5.22",
     "eslint": "^9",
     "eslint-config-next": "15.4.4",
     "typescript": "^5"
