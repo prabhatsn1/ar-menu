@@ -59,20 +59,14 @@ import {
 } from "@/lib/database";
 import dashboardData from "@/data/dashboard_mock.json";
 
-interface DashboardPageProps {
-  // In a real app, get user from session
-  userId?: string;
-}
-
 /**
  * Enhanced Restaurant Owner Dashboard with Professional Animations
  * Features smooth animations, scroll effects, and interactive transitions
  */
-export default function DashboardPage({
-  userId = "owner-1",
-}: DashboardPageProps) {
+export default function DashboardPage() {
   const router = useRouter();
   const { scrollY } = useScroll();
+  const userId = "owner-1"; // In a real app, get user from session
 
   // Parallax effects
   const headerY = useTransform(scrollY, [0, 300], [0, -50]);
@@ -262,7 +256,7 @@ export default function DashboardPage({
       y: 0,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 12,
       },
@@ -280,7 +274,7 @@ export default function DashboardPage({
       y: 0,
       rotateX: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 15,
       },
@@ -291,7 +285,7 @@ export default function DashboardPage({
       rotateX: 2,
       boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 20,
       },
@@ -309,7 +303,7 @@ export default function DashboardPage({
       scale: 1,
       rotateY: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 200,
         damping: 20,
       },
@@ -319,7 +313,7 @@ export default function DashboardPage({
       rotateY: 5,
       boxShadow: "0 15px 30px rgba(102, 126, 234, 0.2)",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 10,
       },
@@ -916,18 +910,20 @@ export default function DashboardPage({
               onClose={() => setItemDialogOpen(false)}
               maxWidth="md"
               fullWidth
-              PaperComponent={motion.div}
-              PaperProps={{
-                initial: { opacity: 0, scale: 0.8, y: -50 },
-                animate: { opacity: 1, scale: 1, y: 0 },
-                exit: { opacity: 0, scale: 0.8, y: -50 },
-                transition: { type: "spring", stiffness: 300, damping: 30 },
-                style: {
-                  borderRadius: 16,
-                  background: "rgba(255, 255, 255, 0.95)",
-                  backdropFilter: "blur(20px)",
-                },
-              }}
+              PaperProps={
+                {
+                  component: motion.div,
+                  initial: { opacity: 0, scale: 0.8, y: -50 },
+                  animate: { opacity: 1, scale: 1, y: 0 },
+                  exit: { opacity: 0, scale: 0.8, y: -50 },
+                  transition: { type: "spring", stiffness: 300, damping: 30 },
+                  style: {
+                    borderRadius: 16,
+                    background: "rgba(255, 255, 255, 0.95)",
+                    backdropFilter: "blur(20px)",
+                  },
+                } as any
+              }
             >
               <DialogTitle sx={{ fontWeight: 700, fontSize: "1.5rem" }}>
                 {editingItem
